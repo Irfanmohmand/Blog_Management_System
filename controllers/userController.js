@@ -8,7 +8,8 @@ import { generateCookie } from "../utils/feature.js";
 const homePage = ("/", (req, res) => {
   res.json({
     success: true,
-    name: "Irfan Ullah"
+    name: "Irfan Ullah",
+    email: "irfanmohmand987"
   })
 });
 
