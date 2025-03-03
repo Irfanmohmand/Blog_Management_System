@@ -70,4 +70,35 @@ export const deleteBlog = async (req, res) => {
     success: true,
     message: "blog deleted.."
   })
+};
+
+
+
+export const allBlogs = async (req, res) => {
+  const blogs = await Blog.find();
+
+  res.json({
+    success: true,
+    message: "All blogs are here",
+    blogs
+  })
+};
+
+
+
+export const getBlogById = async (req, res) => {
+  const { id } = req.params;
+
+  const blogs = await Blog.findById(id);
+
+  if (!blogs) return res.status(404).json({
+    success: false,
+    message: "Invalid user"
+  })
+
+  res.json({
+    success: true,
+    message: "This is the current blog",
+    blogs
+  })
 }

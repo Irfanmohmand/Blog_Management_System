@@ -2,3 +2,9 @@ Backend Deployment
 1. Go to render website
 2. Click on new on the left side
 3. Click on web service
+
+
+3. To update 
+git add .
+git commit -m "Fix Vercel deployment"
+git push origin main

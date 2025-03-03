@@ -87,4 +87,24 @@ const getMyProfile = async (req, res) => {
 }
 
 
-export { homePage, register, login, logout, getMyProfile }
+
+// get user by id
+const getUserById = async (req, res) => {
+  const { id } = req.params;
+
+  const findUserById = await User.findById(id);
+
+  if (!findUserById) return res.status(404).json({
+    success: false,
+    message: "User not find.."
+  })
+
+  res.json({
+    success: true,
+    message: "This is the current user..",
+    findUserById
+  })
+}
+
+
+export { homePage, register, login, logout, getMyProfile, getUserById }
