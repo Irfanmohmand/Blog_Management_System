@@ -9,8 +9,8 @@ router.post("/new", isAuthenticated, createBlog)
 router.get("/myblogs", isAuthenticated, myBlog)
 router.put("/:id", updateBlog)
 router.delete("/:id", deleteBlog);
-router.get("/allblogs", isAuthenticated, allBlogs);
-router.get("/blogs/:id", isAuthenticated, getBlogById);
+router.get("/allblogs", allBlogs);
+router.get("/blogs/:id", isAuthenticated, getBlogById)
 
 
 export default router;
