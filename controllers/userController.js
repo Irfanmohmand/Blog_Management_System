@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt"
 import { User } from "../models/userModel.js";
 import { generateCookie } from "../utils/feature.js";
 
