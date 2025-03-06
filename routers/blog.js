@@ -5,7 +5,7 @@ import { createBlog, myBlog, updateBlog, deleteBlog, allBlogs, getBlogById } fro
 
 const router = express.Router();
 
-router.post("/new", isAuthenticated, createBlog)
+router.post("/new", createBlog)
 router.get("/myblogs", isAuthenticated, myBlog)
 router.put("/:id", updateBlog)
 router.delete("/:id", deleteBlog);
